@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <% messages.map(function(message) { %>
-      <%= message.user %>
-      <%= message.added %>
-      <%= message.text %>
-   <% }) %>
-    <p></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>Welcome to the <%= title %>
+  </h1>
+  <% messages.map(function(message) { %>
+    <div>
+      <h3>
+        <%= message.user %>
+      </h3>
+      <h4>
+        <%= message.text %>
+      </h4>
+      <p>
+        <%= message.added %>
+          <p>
+    </div>
+    <% }) %>
+      <a href="/new"><button id="new-message">Submit A New Message</button></a>
+</body>
+
 </html>
